@@ -12,7 +12,14 @@ public abstract class Person
     public Address Address { get; set; }
 
 
-    public Person(string firstName, string lastName, int phone, string personalNumber, string street, int zipCode, string city)
+    public Person(
+        string firstName, 
+        string lastName, 
+        int phone, 
+        string personalNumber, 
+        string street, 
+        int zipCode, 
+        string city)
     {
         FirstName = firstName;
         LastName = lastName;

@@ -8,7 +8,10 @@ public class Address
     public int ZipCode { get; set; }
     public string City { get; set; }
 
-    public Address(string street, int zipCode, string city)
+    public Address(
+        string street, 
+        int zipCode, 
+        string city)
     {
         Street = street;
         ZipCode = zipCode;
