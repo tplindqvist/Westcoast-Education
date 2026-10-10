@@ -7,7 +7,16 @@ namespace WestcoastEducation
     {
         static void Main()
         {
+            Student student = new(
+                "Test",
+                "Testsson",
+                0704501010,
+                "19960415-4529",
+                "Testgatan 15",
+                12345,
+                "Stockholm");
 
+                Console.WriteLine(student);
         }
     }
 
