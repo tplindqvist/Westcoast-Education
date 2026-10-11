@@ -49,6 +49,22 @@ namespace WestcoastEducation
 
                 Console.WriteLine(educationManager);
 
+            Console.WriteLine("=============================");
+            
+            Administrator administrator = new(
+                "Admin",
+                "Adminsson",
+                0701032133,
+                "850113-3319",
+                "Admingatan 15",
+                12456,
+                "Karlshamn",
+                "None",
+                new DateOnly(2024,5, 4)
+                );
+
+                Console.WriteLine(administrator);
+
         }
     }
 
