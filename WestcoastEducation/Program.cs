@@ -65,6 +65,18 @@ namespace WestcoastEducation
 
                 Console.WriteLine(administrator);
 
+            Console.WriteLine("=============================");
+
+            Course course = new Course(
+                "FS26B",
+                "Filosofi",
+                40,
+                new DateOnly(2026,08,25),
+                new DateOnly(2027,06,25),
+                CourseType.Remote
+            );
+
+            Console.WriteLine(course);
         }
     }
 
