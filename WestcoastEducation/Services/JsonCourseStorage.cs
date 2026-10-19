@@ -16,6 +16,7 @@ public class JsonCourseStorage : ICourseStorage
 
     public void Save(List<Course> courses)
     {
+        Directory.CreateDirectory(Path.GetDirectoryName(FilePath));
         var options = new JsonSerializerOptions { WriteIndented = true };
         string json = JsonSerializer.Serialize(courses, options);
         File.WriteAllText(FilePath, json);

@@ -1,4 +1,5 @@
 ﻿using System;
+using WestcoastEducation.Interfaces;
 using WestcoastEducation.Models;
 using WestcoastEducation.Services;
 
@@ -103,5 +104,11 @@ class Program
 
         Console.WriteLine("── Studenter ──");
         manager.ListStudents();
+
+        // Spara kurserna till JSON
+        ICourseStorage storage = new JsonCourseStorage("Data/courses.json");
+        storage.Save(manager.Courses);
+        Console.WriteLine();
+        Console.WriteLine("Kurserna har sparats till courses.json");
     }
 }
