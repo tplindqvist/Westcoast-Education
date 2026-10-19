@@ -31,7 +31,7 @@ public abstract class Person
     public override string ToString()
     {
 
-        return $"{FirstName} {LastName}, {Phone}, {PersonalNumber} {Address}";
+        return $"{FirstName} {LastName}, {Phone}, {PersonalNumber}, {Address}";
 
     }
 

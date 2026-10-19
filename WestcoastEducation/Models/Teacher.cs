@@ -15,13 +15,10 @@ public class Teacher : Staff
     string city,
     string subject)
     : base
-    (firstName, lastName, phone, personalNumber, street, zipCode, city, subject)
-    {
-        Subject = subject;
-    }
+    (firstName, lastName, phone, personalNumber, street, zipCode, city, subject){}
 
     public override string ToString()
     {
-        return $"Teacher: {base.ToString()}";
+        return $"Lärare: {base.ToString()}";
     }
 }

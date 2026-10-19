@@ -16,7 +16,7 @@ public class JsonCourseStorage : ICourseStorage
 
     public void Save(List<Course> courses)
     {
-        Directory.CreateDirectory(Path.GetDirectoryName(FilePath));
+        Directory.CreateDirectory(Path.GetDirectoryName(FilePath)); // Mappen måste finnas innan filen skrivs
         var options = new JsonSerializerOptions { WriteIndented = true };
         string json = JsonSerializer.Serialize(courses, options);
         File.WriteAllText(FilePath, json);
@@ -24,6 +24,19 @@ public class JsonCourseStorage : ICourseStorage
 
     public List<Course> Load()
     {
-        return new List<Course>();
+        if (!File.Exists(FilePath)) // Filen finns inte vid första körning, den tomma listan förhindrar krasch
+        {
+            return new List<Course>();
+        }
+
+        string json = File.ReadAllText(FilePath);
+        List<Course>? courses = JsonSerializer.Deserialize<List<Course>>(json);
+
+        if (courses == null)
+        {
+            return new List<Course>();
+        }
+
+        return courses;
     }
 }

@@ -106,7 +106,7 @@ class Program
         manager.ListStudents();
 
         // Spara kurserna till JSON
-        ICourseStorage storage = new JsonCourseStorage("Data/courses.json");
+        ICourseStorage storage = new JsonCourseStorage("Data/courses.json"); // Variabeln har interfacets typ, så endast denna raden ändras om lagring byts ut
         storage.Save(manager.Courses);
         Console.WriteLine();
         Console.WriteLine("Kurserna har sparats till courses.json");

@@ -11,9 +11,9 @@ public class Course
     public DateOnly StartDate { get; set; }
     public DateOnly EndDate { get; set; }
     public CourseType CourseType { get; set; }
-    [JsonIgnore]
+    [JsonIgnore] // Bara kursens egna uppgifter ska med
     public Teacher? Teacher { get; set; } // Aggregation (läraren skapas någon annanstans, kursen pekar bara på den) 
-    [JsonIgnore]
+    [JsonIgnore] // Bara kursens egna uppgifter ska med
     public List<Student> Students { get; set; }
     public Course(
         string courseNumber,
