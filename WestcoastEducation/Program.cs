@@ -78,6 +78,11 @@ namespace WestcoastEducation
 
             Console.WriteLine(course);
 
+            Console.WriteLine("=============================");
+
+            course.Teacher = teacher;
+            Console.WriteLine(course.Teacher);
+
         }
     }
 
