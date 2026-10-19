@@ -1,4 +1,5 @@
 using System;
+using System.Text.Json.Serialization;
 
 namespace WestcoastEducation.Models;
 
@@ -10,7 +11,9 @@ public class Course
     public DateOnly StartDate { get; set; }
     public DateOnly EndDate { get; set; }
     public CourseType CourseType { get; set; }
+    [JsonIgnore]
     public Teacher? Teacher { get; set; } // Aggregation (läraren skapas någon annanstans, kursen pekar bara på den) 
+    [JsonIgnore]
     public List<Student> Students { get; set; }
     public Course(
         string courseNumber,
