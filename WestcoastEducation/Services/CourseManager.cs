@@ -10,6 +10,7 @@ public class CourseManager
     {
         Courses = new List<Course>();
     }
+
     public void AddCourse(Course course)
     {
         if (Courses.Contains(course))
@@ -19,6 +20,14 @@ public class CourseManager
         else
         {
             Courses.Add(course);
+        }
+    }
+
+    public void ListCourses()
+    {
+        foreach (Course course in Courses)
+        {
+            Console.WriteLine(course);
         }
     }
 }

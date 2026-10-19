@@ -47,6 +47,18 @@ public class Course
         teacher.Courses.Add(this);
     }
 
+    private string GetTeacherText()
+    {
+        if (Teacher == null)
+        {
+            return "Ingen lärare tillsatt";
+        }
+        else
+        {
+            return $"{Teacher.FirstName} {Teacher.LastName}";
+        }
+    }
+
     private string GetCourseTypeText()
     {
         if (CourseType == CourseType.Classroom)
@@ -61,7 +73,7 @@ public class Course
 
     public override string ToString()
     {
-        return $"Course: {CourseNumber}, {Title}, {LengthInWeeks}, {StartDate:yyyy-MM-dd} - {EndDate:yyyy-MM-dd}, {GetCourseTypeText()}";
+        return $"Kurs: {Title} ({CourseNumber}), Längd: {LengthInWeeks} veckor, {StartDate:yyyy-MM-dd} - {EndDate:yyyy-MM-dd}, {GetCourseTypeText()}, Lärare: {GetTeacherText()}, {Students.Count} studenter";
     }
 
 }

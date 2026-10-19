@@ -99,6 +99,12 @@ namespace WestcoastEducation
             CourseManager manager = new CourseManager();
             manager.AddCourse(filosofi);
             Console.WriteLine(manager.Courses.Count);
+            
+            Console.WriteLine("=============================");
+
+            manager.ListCourses();
+            
+
         }
     }
 
