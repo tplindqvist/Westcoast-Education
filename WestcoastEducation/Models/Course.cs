@@ -29,6 +29,11 @@ public class Course
         Students = new List<Student>();
     }
 
+    public void AddStudent (Student student)
+    {
+        Students.Add(student);
+    }
+
     private string GetCourseTypeText()
     {
         if (CourseType == CourseType.Classroom)
