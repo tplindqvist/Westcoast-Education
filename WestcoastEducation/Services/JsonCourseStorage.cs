@@ -1,4 +1,5 @@
 using System;
+using System.Text.Json;
 using WestcoastEducation.Interfaces;
 using WestcoastEducation.Models;
 
@@ -15,7 +16,9 @@ public class JsonCourseStorage : ICourseStorage
 
     public void Save(List<Course> courses)
     {
-
+        var options = new JsonSerializerOptions { WriteIndented = true };
+        string json = JsonSerializer.Serialize(courses, options);
+        File.WriteAllText(FilePath, json);
     }
 
     public List<Course> Load()
