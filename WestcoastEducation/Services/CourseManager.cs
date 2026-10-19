@@ -6,9 +6,11 @@ namespace WestcoastEducation.Services;
 public class CourseManager
 {
     public List<Course> Courses { get; set; }
+    public List<Student> Students { get; set; }
     public CourseManager()
     {
         Courses = new List<Course>();
+        Students = new List<Student>();
     }
 
     public void AddCourse(Course course)
@@ -22,6 +24,17 @@ public class CourseManager
             Courses.Add(course);
         }
     }
+    public void AddStudent(Student student)
+    {
+        if (Students.Contains(student))
+        {
+            Console.WriteLine("Student finns redan!");
+        }
+        else
+        {
+            Students.Add(student);
+        }
+    }
 
     public void ListCourses()
     {
@@ -30,4 +43,12 @@ public class CourseManager
             Console.WriteLine(course);
         }
     }
+    public void ListStudents()
+    {
+        foreach (Student student in Students)
+        {
+            Console.WriteLine(student);
+        }
+    }
+
 }

@@ -104,6 +104,10 @@ namespace WestcoastEducation
 
             manager.ListCourses();
             
+            Console.WriteLine("=============================");
+
+            manager.AddStudent(student);
+            manager.ListStudents();
 
         }
     }
