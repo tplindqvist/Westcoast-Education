@@ -80,7 +80,7 @@ namespace WestcoastEducation
 
             Console.WriteLine("=============================");
 
-            filosofi.Teacher = teacher;
+            filosofi.AssignTeacher(teacher);
             Console.WriteLine(filosofi.Teacher);
 
             Console.WriteLine("=============================");
@@ -91,6 +91,7 @@ namespace WestcoastEducation
             
 
             Console.WriteLine(filosofi.Students.Count);
+            Console.WriteLine(teacher.Courses.Count);
         }
     }
 

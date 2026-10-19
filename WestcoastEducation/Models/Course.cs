@@ -41,6 +41,12 @@ public class Course
         }
     }
 
+    public void AssignTeacher(Teacher teacher)
+    {
+        Teacher = teacher;
+        teacher.Courses.Add(this);
+    }
+
     private string GetCourseTypeText()
     {
         if (CourseType == CourseType.Classroom)
