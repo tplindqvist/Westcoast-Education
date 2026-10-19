@@ -23,7 +23,7 @@ public class Administrator : Staff
 
     public override string ToString()
     {
-        return $"Administratör: {base.ToString()}";
+        return $"Administratör: {base.ToString()} | Anställningsdatum: {EmploymentDate: yyyy-MM-dd}" ;
     }
 
 }
