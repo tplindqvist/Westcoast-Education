@@ -2,9 +2,9 @@ using System;
 
 namespace WestcoastEducation.Models;
 
-public class Administrator : EducationManager
+public class Administrator : Staff
 {
-
+ public DateOnly EmploymentDate { get; set; }
      public Administrator
     (string firstName,
     string lastName,
@@ -16,7 +16,10 @@ public class Administrator : EducationManager
     string subject,
     DateOnly employmentDate)
     : base
-    (firstName, lastName, phone, personalNumber, street, zipCode, city, subject, employmentDate){}
+    (firstName, lastName, phone, personalNumber, street, zipCode, city, subject)
+    {
+        EmploymentDate = employmentDate;
+    }
 
     public override string ToString()
     {

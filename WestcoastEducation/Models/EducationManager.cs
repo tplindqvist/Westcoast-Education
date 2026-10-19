@@ -2,7 +2,7 @@ using System;
 
 namespace WestcoastEducation.Models;
 
-public class EducationManager : Teacher
+public class EducationManager : Staff
 {
 
     public DateOnly EmploymentDate { get; set; }
