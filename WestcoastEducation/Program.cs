@@ -77,6 +77,7 @@ namespace WestcoastEducation
             );
 
             Console.WriteLine(course);
+
         }
     }
 

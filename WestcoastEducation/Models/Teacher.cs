@@ -22,6 +22,6 @@ public class Teacher : Staff
 
     public override string ToString()
     {
-        return $"Teacher: {base.ToString()} | Ämne: {Subject}";
+        return $"Teacher: {base.ToString()}";
     }
 }

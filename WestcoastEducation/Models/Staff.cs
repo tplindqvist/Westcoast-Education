@@ -20,4 +20,9 @@ public abstract class Staff : Person
         Subject = subject;
     }
 
+    public override string ToString()
+    {
+        return $"{base.ToString()} | Ämne: {Subject}";
+    }
+
 }
