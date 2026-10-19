@@ -29,9 +29,16 @@ public class Course
         Students = new List<Student>();
     }
 
-    public void AddStudent (Student student)
+    public void AddStudent(Student student)
     {
-        Students.Add(student);
+        if (Students.Contains(student))
+        {
+            Console.WriteLine("Student finns redan i kursen.");
+        }
+        else
+        {
+            Students.Add(student);
+        }
     }
 
     private string GetCourseTypeText()

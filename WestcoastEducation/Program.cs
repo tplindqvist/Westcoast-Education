@@ -67,7 +67,7 @@ namespace WestcoastEducation
 
             Console.WriteLine("=============================");
 
-            Course course = new Course(
+            Course filosofi = new Course(
                 "FS26B",
                 "Filosofi",
                 40,
@@ -76,18 +76,21 @@ namespace WestcoastEducation
                 CourseType.Remote
             );
 
-            Console.WriteLine(course);
+            Console.WriteLine(filosofi);
 
             Console.WriteLine("=============================");
 
-            course.Teacher = teacher;
-            Console.WriteLine(course.Teacher);
+            filosofi.Teacher = teacher;
+            Console.WriteLine(filosofi.Teacher);
 
             Console.WriteLine("=============================");
 
-            course.AddStudent(student);
+            filosofi.AddStudent(student);
+            filosofi.AddStudent(student);
 
-            Console.WriteLine(course.Students.Count);
+            
+
+            Console.WriteLine(filosofi.Students.Count);
         }
     }
 
