@@ -1,5 +1,6 @@
 ﻿using System;
 using WestcoastEducation.Models;
+using WestcoastEducation.Services;
 
 namespace WestcoastEducation
 {
@@ -92,6 +93,12 @@ namespace WestcoastEducation
 
             Console.WriteLine(filosofi.Students.Count);
             Console.WriteLine(teacher.Courses.Count);
+
+            Console.WriteLine("=============================");
+
+            CourseManager manager = new CourseManager();
+            manager.AddCourse(filosofi);
+            Console.WriteLine(manager.Courses.Count);
         }
     }
 
