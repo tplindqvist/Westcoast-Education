@@ -110,5 +110,15 @@ class Program
         storage.Save(manager.Courses);
         Console.WriteLine();
         Console.WriteLine("Kurserna har sparats till courses.json");
+
+        // Läs in kurserna från JSON igen
+        List<Course> loadedCourses = storage.Load();
+
+        Console.WriteLine();
+        Console.WriteLine("── Inlästa kurser från JSON ──");
+        foreach (Course course in loadedCourses)
+        {
+            Console.WriteLine(course);
+        }
     }
 }
