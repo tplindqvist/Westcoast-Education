@@ -2,9 +2,8 @@ using System;
 
 namespace WestcoastEducation.Models;
 
-public class Teacher : Person
+public class Teacher : Staff
 {
-    public string Subject { get; set; }
 
     public Teacher
     (string firstName,
@@ -16,7 +15,7 @@ public class Teacher : Person
     string city,
     string subject)
     : base
-    (firstName, lastName, phone, personalNumber, street, zipCode, city)
+    (firstName, lastName, phone, personalNumber, street, zipCode, city, subject)
     {
         Subject = subject;
     }

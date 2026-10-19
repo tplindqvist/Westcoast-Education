@@ -1,0 +1,23 @@
+using System;
+
+namespace WestcoastEducation.Models;
+
+public abstract class Staff : Person
+{
+    public string Subject { get; set; }
+    public Staff
+    (string firstName,
+    string lastName,
+    int phone,
+    string personalNumber,
+    string street,
+    int zipCode,
+    string city,
+    string subject)
+    : base
+    (firstName, lastName, phone, personalNumber, street, zipCode, city)
+    {
+        Subject = subject;
+    }
+
+}
