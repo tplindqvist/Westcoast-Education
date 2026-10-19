@@ -2,7 +2,7 @@ using System;
 
 namespace WestcoastEducation.Models;
 
-public abstract class Staff : Person
+public abstract class Staff : Person // Gemensam basklass för all personal
 {
     public string Subject { get; set; }
     public List<Course> Courses { get; set; }

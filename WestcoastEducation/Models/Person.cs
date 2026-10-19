@@ -25,7 +25,7 @@ public abstract class Person
         LastName = lastName;
         Phone = phone;
         PersonalNumber = personalNumber;
-        Address = new Address(street, zipCode, city);
+        Address = new Address(street, zipCode, city); // Composition (Adressen skapas här inne och tillhör personen)
     }
 
     public override string ToString()

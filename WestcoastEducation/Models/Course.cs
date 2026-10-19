@@ -10,7 +10,7 @@ public class Course
     public DateOnly StartDate { get; set; }
     public DateOnly EndDate { get; set; }
     public CourseType CourseType { get; set; }
-    public Teacher? Teacher { get; set; }
+    public Teacher? Teacher { get; set; } // Aggregation (läraren skapas någon annanstans, kursen pekar bara på den) 
     public List<Student> Students { get; set; }
     public Course(
         string courseNumber,
