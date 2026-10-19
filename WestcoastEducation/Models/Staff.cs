@@ -5,6 +5,7 @@ namespace WestcoastEducation.Models;
 public abstract class Staff : Person
 {
     public string Subject { get; set; }
+    public List<Course> Courses { get; set; }
     public Staff
     (string firstName,
     string lastName,
@@ -18,6 +19,7 @@ public abstract class Staff : Person
     (firstName, lastName, phone, personalNumber, street, zipCode, city)
     {
         Subject = subject;
+        Courses = new List<Course>();
     }
 
     public override string ToString()
