@@ -11,7 +11,7 @@ public class Course
     public DateOnly EndDate { get; set; }
     public CourseType CourseType { get; set; }
     public Teacher? Teacher { get; set; }
-
+    public List<Student> Students { get; set; }
     public Course(
         string courseNumber,
         string title,
@@ -26,6 +26,7 @@ public class Course
         StartDate = startDate;
         EndDate = endDate;
         CourseType = courseType;
+        Students = new List<Student>();
     }
 
     private string GetCourseTypeText()
