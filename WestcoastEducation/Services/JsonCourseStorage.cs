@@ -16,7 +16,14 @@ public class JsonCourseStorage : ICourseStorage
 
     public void Save(List<Course> courses)
     {
-        Directory.CreateDirectory(Path.GetDirectoryName(FilePath)); // Mappen måste finnas innan filen skrivs
+        // Mappen måste finnas innan filen skrivs
+        // Kollar null ifall sökvägen saknar mapp
+        string? folder = Path.GetDirectoryName(FilePath);
+        if (!string.IsNullOrEmpty(folder))
+        {
+            Directory.CreateDirectory(folder);
+        }
+
         var options = new JsonSerializerOptions { WriteIndented = true };
         string json = JsonSerializer.Serialize(courses, options);
         File.WriteAllText(FilePath, json);
