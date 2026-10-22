@@ -13,7 +13,7 @@ public class Course
     public CourseType CourseType { get; set; }
     [JsonIgnore] // Bara kursens egna uppgifter ska med
     public Teacher? Teacher { get; set; } // Aggregation (läraren skapas någon annanstans, kursen pekar bara på den) 
-    [JsonIgnore] // Bara kursens egna uppgifter ska med
+    [JsonIgnore]
     public List<Student> Students { get; set; }
     public Course(
         string courseNumber,
